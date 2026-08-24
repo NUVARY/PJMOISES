@@ -1,38 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galería de Imágenes</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PJ.MoisèsBlogs</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="top-bar">
-    <a href="index.html" class="back-btn">⬅</a>
-    <h3>IMAGENES</h3>
-</header>
+    <!-- ==================== -->
+    <!-- HEADER -->
+    <!-- ==================== -->
 
-<section class="gallery">
+    <header class="header">
 
-  <div class="img-card">
-    <img src="IMAGENES/Imagenes de frases/1.jpg" alt="Imagen 1">
-  </div>
+        <div class="logo">
+            PJ.MoisèsBlogs
+        </div>
 
-  <div class="img-card">
-    <img src="IMAGENES/Imagenes de frases/2.jpg" alt="Imagen 2">
-  </div>
+        <nav class="menu">
+            <a href="Perfil/perfil.html">PERFIL</a>
+        </nav>
 
-  <div class="img-card">
-    <img src="IMAGENES/Imagenes de frases/3.jpg" alt="Imagen 3">
-  </div>
+    </header>
 
-   <div class="img-card">
-    <img src="IMAGENES/Imagenes de frases/4.jpg" alt="Imagen 3">
-  </div>
-  
-</section>
+
+    <!-- ==================== -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ==================== -->
+
+    <main class="container">
+
+
+        <!-- ==================== -->
+        <!-- PERFIL -->
+        <!-- ==================== -->
+
+        <aside class="perfil">
+
+            <h1>BIENVENIDOS</h1>
+
+            <p>
+                Hola, seguimos mejorando el sitio web para usted.
+            </p>
+
+            <p>
+                <strong>23/08/2026</strong><br>
+                Actualizaciones
+            </p>
+
+        </aside>
+
+
+        <!-- ==================== -->
+        <!-- FEED -->
+        <!-- ==================== -->
+
+        <section class="feed">
+
+            <!-- PUBLICACIÓN -->
+
+            <div class="publicacion">
+
+                <h4>PJ.MoisèsBlogs</h4>
+
+                <h1>👋 Bienvenidos a PJ.Moisès</h1>
+
+                <!-- TEXTO VISIBLE -->
+
+                <p>
+                    Aquí puedes colocar el texto principal de la publicación.
+                </p>
+
+
+                <!-- CONTENIDO OCULTO -->
+
+                <div class="contenido-extra">
+
+                    <p>
+                        <strong>
+                            Información de la publicación
+                        </strong>
+                    </p>
+
+                    <p>
+                        Aquí puedes escribir información adicional
+                        sobre PJ.MoisèsBlogs.
+                    </p>
+
+
+                    <!-- PRIMERA LISTA -->
+
+                    <ul>
+
+                        <li>
+                            Primer punto de información.
+                        </li>
+
+                        <li>
+                            Segundo punto de información.
+                        </li>
+
+                        <li>
+                            Tercer punto de información.
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        <strong>
+                            Más información
+                        </strong>
+                    </p>
+
+
+                    <!-- SEGUNDA LISTA -->
+
+                    <ul>
+
+                        <li>
+                            Información adicional.
+                        </li>
+
+                        <li>
+                            Nuevos proyectos.
+                        </li>
+
+                        <li>
+                            Próximas actualizaciones.
+                        </li>
+
+                        <li>
+                            Más novedades próximamente.
+                        </li>
+
+                    </ul>
+
+
+                    <p>
+                        Gracias por visitar PJ.MoisèsBlogs.
+                    </p>
+
+                </div>
+
+
+                <!-- BOTÓN LEER MÁS -->
+
+                <button
+                    class="boton-leer"
+                    onclick="leerMas(this)">
+                    Leer más
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== -->
+        <!-- CATEGORÍAS -->
+        <!-- ==================== -->
+
+        <aside class="categorias">
+
+            <details class="menu-categorias">
+
+                <summary>
+                    Categorías
+                </summary>
+
+                <a href="#">
+                    Contenidos
+                </a>
+
+                <a href="Imágenes/Imágenes.html">
+                   Imágenes
+                </a>
+
+            </details>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ==================== -->
+    <!-- BUZÓN DE QUEJAS -->
+    <!-- ==================== -->
+
+    <details class="buzon-desplegable">
+
+        <summary>
+            Buzón de Quejas
+        </summary>
+
+        <form
+            action="mailto:diamantesdmpj@gmail.com"
+            method="post"
+            enctype="text/plain">
+
+            <textarea
+                name="queja"
+                placeholder="Escribe tu queja aquí..."
+                required></textarea>
+
+            <button type="submit">
+                Enviar
+            </button>
+
+        </form>
+
+    </details>
+
+
+    <!-- ==================== -->
+    <!-- BOTÓN WHATSAPP -->
+    <!-- ==================== -->
+
+    <a
+        href="https://wa.me/639121088486?text=Hello%20I%20contact%20you%20from%20the%20website"
+        class="whatsapp">
+        💬
+    </a>
+
+
+    <!-- ==================== -->
+    <!-- JAVASCRIPT -->
+    <!-- ==================== -->
+
+    <script>
+
+        function leerMas(boton) {
+
+            const contenido = boton.previousElementSibling;
+
+            if (contenido.style.display === "block") {
+
+                contenido.style.display = "none";
+                boton.textContent = "Leer más";
+
+            } else {
+
+                contenido.style.display = "block";
+                boton.textContent = "Leer menos";
+
+            }
+
+        }
+
+    </script>
 
 </body>
+
 </html>
